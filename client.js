@@ -2,6 +2,7 @@
 
 //require the net package
 const net = require('net');
+const { setTimeout } = require('timers');
 
 /**
  * Establishes connection with the game server
@@ -31,3 +32,24 @@ const connect = function() {
 
 //exporting the connect function in an object
 module.exports = {connect};
+
+
+
+
+
+//test movement code
+// setInterval(() => {
+//   conn.write('Move: up')
+// }, 1000);
+// setInterval(() => {
+//   conn.write('Move: down')
+// }, 50);
+// conn.write('Move: up')
+// setTimeout(() => {
+//   conn.write('Move: left')
+// }, 50);
+// setTimeout(() => {
+//   conn.write('Move: right')
+// }, 50);
+// conn.write('Move: left')
+// conn.write('Move: left')
