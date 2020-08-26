@@ -4,7 +4,7 @@ let connection;
 
 //handleUserInput registered as the "data" callback handler for stdin
 const handleUserInput = (data) => {
-  console.log(data)
+  // console.log(data)
   if (data === "\u0003") {
     process.exit();
   }
@@ -29,6 +29,16 @@ const handleUserInput = (data) => {
   if(data === "d"){
     // console.log('you hit the d key!')
     connection.write("Move: right");
+  }
+
+  if(data === "r"){
+    // console.log('you hit the d key!')
+    connection.write("Say: Go Snake Go!");
+  }
+
+  if(data === "q"){
+    // console.log('you hit the d key!')
+    connection.write("Say: Must get the precious....!");
   }
 };
 
