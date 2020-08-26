@@ -1,3 +1,7 @@
+const { stdout } = require("process");
+// Stores the active TCP connection object.
+let connection;
+
 //handleUserInput registered as the "data" callback handler for stdin
 const handleUserInput = (data) => {
   console.log(data)
@@ -5,17 +9,35 @@ const handleUserInput = (data) => {
     process.exit();
   }
 
-  //test experiment
-  // if(data === "\u0062" || data === "b"){
-  //   console.log('you hit the b key!')
-  // }
+  // test experiment
+  if(data === "w"){
+    console.log('you hit the w key!')
+    
+  }
+
+  if(data === "s"){
+    console.log('you hit the s key!')
+    
+  }
+
+  if(data === "a"){
+    console.log('you hit the a key!')
+    
+  }
+
+  if(data === "d"){
+    console.log('you hit the d key!')
+    
+  }
 };
 
 /**
  * Setup User Interface 
  * Specifically, so that we can handle user input via stdin
  */
-const setupInput = function () {
+const setupInput = function (conn) {
+  //were setting connection to conn
+  connection = conn;
   const stdin = process.stdin;
   //without setRawMode(true) this just takes input in one line not individual keystrokes.
   stdin.setRawMode(true);

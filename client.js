@@ -2,7 +2,6 @@
 
 //require the net package
 const net = require('net');
-const { setTimeout } = require('timers');
 
 /**
  * Establishes connection with the game server
