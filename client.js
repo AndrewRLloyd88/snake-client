@@ -7,13 +7,13 @@ const { setTimeout } = require('timers');
 /**
  * Establishes connection with the game server
  */
-const connect = function() {
-  const conn = net.createConnection({ 
-    host: 'localhost',
-    port: 50541
+const connect = function () {
+  const conn = net.createConnection({
+    host: '135.23.222.131',
+    port: 50542
   });
   // interpret incoming data as text
-  conn.setEncoding('utf8'); 
+  conn.setEncoding('utf8');
 
   //event handler for data to handle incoming data and console log it to our client
   conn.on('data', (data) => {
@@ -26,12 +26,12 @@ const connect = function() {
     conn.write('Name: ARL');
   });
 
-//return conn
+  //return conn
   return conn;
 }
 
 //exporting the connect function in an object
-module.exports = {connect};
+module.exports = { connect };
 
 
 
