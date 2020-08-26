@@ -5,6 +5,12 @@ const { setupInput} = require("./input");
 //our visual feedback
 console.log('Connecting ...');
 //run the connect function above
-connect();
 
-setupInput();
+//conn is your connection object
+//we are just setting this ourselves!
+conn = connect();
+// console.log(conn)
+
+//send write commands
+//we are passing our connection object into setUpInput
+setupInput(conn);

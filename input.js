@@ -11,23 +11,24 @@ const handleUserInput = (data) => {
 
   // test experiment
   if(data === "w"){
-    console.log('you hit the w key!')
-    
+    // console.log('you hit the w key!')
+    //passing the string "Move: up"
+    connection.write("Move: up");
   }
 
   if(data === "s"){
-    console.log('you hit the s key!')
-    
+    // console.log('you hit the s key!')
+    connection.write("Move: down");
   }
 
   if(data === "a"){
-    console.log('you hit the a key!')
-    
+    // console.log('you hit the a key!')
+    connection.write("Move: left");
   }
 
   if(data === "d"){
-    console.log('you hit the d key!')
-    
+    // console.log('you hit the d key!')
+    connection.write("Move: right");
   }
 };
 
@@ -35,6 +36,8 @@ const handleUserInput = (data) => {
  * Setup User Interface 
  * Specifically, so that we can handle user input via stdin
  */
+//setUpInput is now capable of taking in a parameter conn 
+//connection is set equal to conn;
 const setupInput = function (conn) {
   //were setting connection to conn
   connection = conn;
