@@ -6,11 +6,23 @@ const LEFTKEY = "Move: left";
 const DOWNKEY = "Move: down";
 const RIGHTKEY = "Move: right";
 
+//bindings
+const UP = "w"
+const DOWN = "s"
+const RIGHT = "d"
+const LEFT = "a"
+const MESSAGE = "r"
+
 module.exports = {
   IP,
   PORT,
   UPKEY,
   LEFTKEY,
   DOWNKEY,
-  RIGHTKEY
+  RIGHTKEY,
+  UP,
+  DOWN,
+  RIGHT,
+  LEFT,
+  MESSAGE
 };
